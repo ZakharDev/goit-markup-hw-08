@@ -1,0 +1,30 @@
+.header-list .contact-link + .contact-link {
+  margin-left: 50px;
+}
+.contact {
+  fill: currentColor;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primeri-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--function);
+  &:hover,
+  &:focus {
+    color: var(--accent-colot);
+  }
+}
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
