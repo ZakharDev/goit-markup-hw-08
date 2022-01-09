@@ -258,7 +258,7 @@ body {
   padding: 200px 0;
 }
 
-.hero-title {
+.hero__title {
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
@@ -268,7 +268,7 @@ body {
   margin-bottom: 30px;
 }
 
-.hero-button {
+.hero__button {
   background-color: var(--accent-colot);
   color: var(--white-color);
   width: 200px;
@@ -423,26 +423,26 @@ body {
   padding-bottom: 94px;
 }
 
-.team-list {
+.team__list {
   display: flex;
 }
 
-.team-item {
+.team__item {
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(156, 138, 138, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-item {
+.team__item {
   margin-right: 30px;
   background-color: var(--white-color);
 }
 
-.team-item:last-child {
+.team__item:last-child {
   margin-right: 0px;
 }
 
-.team-name {
+.team-box__caption {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -451,7 +451,7 @@ body {
   margin-bottom: 10px;
 }
 
-.team-container {
+.team-box {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -460,19 +460,19 @@ body {
   background-color: var(--gray-background-color);
 }
 
-.team-profession {
+.team-box__text {
   font-size: 16px;
   line-height: 18.75px;
   text-align: center;
 }
 
-.list-social-networks {
+.team-icon__list {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
 
-.item-social-networks {
+.team-icon__item {
   margin-right: 10px;
   width: 44px;
   height: 44px;
@@ -482,15 +482,15 @@ body {
   align-items: center;
 }
 
-.item-social-networks:first-child {
+.team-icon__item:first-child {
   margin-left: 0;
 }
 
-.item-social-networks:last-child {
+.team-icon__item:last-child {
   margin-right: 0;
 }
 
-.link-social-networks {
+.team-icon__link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -503,12 +503,12 @@ body {
   transition-timing-function: var(--function);
 }
 
-.link-social-networks:hover, .link-social-networks:focus {
+.team-icon__link:hover, .team-icon__link:focus {
   background-color: var(--accent-colot);
   color: var(--white-color);
 }
 
-.icon-social-networks {
+.team-icon__icon {
   display: block;
   width: 20px;
   height: 20px;
@@ -518,7 +518,7 @@ body {
   transition-timing-function: var(--function);
 }
 
-.icon-social-networks:hover, .icon-social-networks:focus {
+.team-icon__icon:hover, .team-icon__icon:focus {
   fill: var(--white-color);
   background-color: var(--accent-colot);
 }
