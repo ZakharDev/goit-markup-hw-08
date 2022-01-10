@@ -590,15 +590,6 @@ body {
 
 .team {
   background-color: var(--gray-background-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
 }
 
 .team__title {
@@ -612,8 +603,15 @@ body {
 }
 
 .section-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 @media screen and (min-width: 768px) {

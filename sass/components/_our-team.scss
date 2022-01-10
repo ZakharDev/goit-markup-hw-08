@@ -1,10 +1,10 @@
 .team {
   background-color: var(--gray-background-color);
-  @include section(60px, 60px);
+  // @include section(60px, 60px);
 
-  @media screen and (min-width: $desktop) {
-    @include section(94px, 94px);
-  }
+  // @media screen and (min-width: $desktop) {
+  //   @include section(94px, 94px);
+  // }
 }
 .team__title {
   margin-bottom: 30px;
@@ -13,8 +13,11 @@
   }
 }
 .section-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include section(60px, 60px);
+
+  @media screen and (min-width: $desktop) {
+    @include section(94px, 94px);
+  }
 }
 
 .team__list {
