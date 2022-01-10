@@ -20,6 +20,8 @@
   --modal-policy-link: #2196f3;
   --modal-button-submit-color: #ffffff;
   --modal-checkbox-border-color: #212121;
+  --features-icon-background: #f5f4fa;
+  --features-icon-color: #212121;
 }
 
 h1,
@@ -28,6 +30,7 @@ h3,
 ul,
 p {
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -81,6 +84,12 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero .container {
+    width: 696px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -99,6 +108,22 @@ body {
   }
 }
 
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container--flex .logo {
+  text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+  .container--flex {
+    display: flex;
+  }
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -108,6 +133,7 @@ body {
 
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
 .container--flex {
@@ -327,27 +353,35 @@ body {
 }
 
 .hero__title {
-  color: var(--white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 60px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   margin-bottom: 30px;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {
+  padding: 10px 32px;
   background-color: var(--accent-colot);
-  color: var(--white-color);
-  width: 200px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  border-radius: 4px;
-  letter-spacing: 0.06em;
-  border: none;
+  border-style: none;
   cursor: pointer;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
 }
 
 .section {
@@ -368,41 +402,94 @@ body {
   margin-bottom: 50px;
 }
 
-.features__list {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .features__list {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 
-.features__list:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .features__list {
+    width: 1200px;
+    margin-bottom: 0;
+  }
 }
 
-.features__item {
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-  width: calc((100% - 90px) / 4);
+@media screen and (max-width: 767px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.features__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .features__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-bottom: 0;
+  }
+}
+
+.features__caption {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .features__caption {
+    text-align: left;
+  }
 }
 
 .features__box {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--gray-background-color);
-  border-radius: 4px;
-  width: 270px;
-  height: 120px;
   margin-bottom: 30px;
+  height: 120px;
+  color: var(--features-icon-color);
+  background-color: var(--features-icon-background);
+}
+
+@media screen and (min-widht: 480px) {
+  .features__box {
+    width: 450px;
+  }
+}
+
+@media screen and (min-widht: 768px) {
+  .features__box {
+    width: 354px;
+  }
+}
+
+@media screen and (min-widht: 1200px) {
+  .features__box {
+    width: 270px;
+  }
 }
 
 .features__icon {
   width: 70px;
   height: 70px;
+  fill: currentColor;
 }
 
 .features__caption {
