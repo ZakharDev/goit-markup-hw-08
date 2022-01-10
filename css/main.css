@@ -23,6 +23,8 @@
   --features-icon-background: #f5f4fa;
   --features-icon-color: #212121;
   --work-overlay-bgc-color: rgba(47, 48, 58, 0.8);
+  --client-border-color: #afb1b8;
+  --client-logo-color: #afb1b8;
 }
 
 h1,
@@ -760,45 +762,49 @@ body {
 }
 
 .client__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
   margin-bottom: 50px;
 }
 
 .client__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .client__list {
+    margin-bottom: 0;
+  }
 }
 
 .client__item {
-  margin-left: 30px;
-  width: 170px;
-  height: 92px;
-  border-radius: 4px;
-  transition-property: color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--function);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  flex-basis: calc(100% / 2 - 30px);
 }
 
-.client__item:first-child {
-  margin-left: 0;
+@media screen and (min-width: 768px) {
+  .client__item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client__item {
+    flex-basis: calc(100% / 6 - 30px);
+    margin-bottom: 0;
+  }
 }
 
 .client__link {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 16px 32px; */
-  width: 100%;
-  height: 100%;
-  color: #afb1b8;
+  height: 92px;
+  color: var(--client-logo-color);
+  border: 1px solid var(--client-border-color);
+  border-radius: 4px;
   transition-property: color, border-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--function);
