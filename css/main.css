@@ -27,6 +27,7 @@
   --client-logo-color: #afb1b8;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --footer-bg-color: #2f303a;
+  --gap: 30px;
 }
 
 h1,
@@ -1831,7 +1832,6 @@ body {
 
 .card__items:not(:last-child) {
   margin-bottom: 30px;
-  margin-right: 27px;
 }
 
 @media screen and (min-width: 768px) {
